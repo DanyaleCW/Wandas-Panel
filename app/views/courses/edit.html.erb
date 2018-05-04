@@ -1,0 +1,12 @@
+<%= form_for @cohort do |f| %>  
+    <%= f.label :name %>  
+    <%= f.text_field :name, value: @cohort.name%>  
+    <%= f.label :total_hours %>  
+    <%= f.number_field :total_hours, value: @cohort.total_hours%>
+   
+
+    <%= f.submit %>
+<% end %>
+
+
+<%= link_to 'Delete', course_path(@course), method: :delete %>

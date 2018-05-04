@@ -1,1 +1,9 @@
-<h1>Courses</h1>
+<h1>Course-Index</h1>
+
+<% @courses.each do |c| %>
+    
+       <h1>Course Name: <%= c.name %></h1>
+       <h1>Total Hours: <%= c.total_hours %></h1>
+        
+   
+<% end %>
