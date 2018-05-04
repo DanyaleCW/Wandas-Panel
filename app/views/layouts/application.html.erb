@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wandas Panel</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="#Instructor">Instructor</a></li>
+        <li><a href="#Students">Students</a></li>
+        <li><a href="#Courses">Courses</a></li>
+          <div class="dropdown">
+            <button class="dropbtn">Cohorts</button>
+                <div class="dropdown-content">
+                  <li><a href="Surfing 101">Surfing 101</a></li>
+                  <li><a href="Surfing 202">Surfing 202</a></li>
+                  <li><a href="Kite Surfing 101">Kite Surfing 101</a></li>
+                  <li><a href="Kite Surfing 202">Kite Surfing 202</a></li>
+                  <li><a href="Wake Surfing 101">Wake Surfing 101</a></li>
+                  <li><a href="Wake Surfing 202">Wake Surfing 202</a></li>
+                  <li><a href="Board Maintenance">Board Maintenance</a></li>
+      </ul>
+                </div>
+          </div>
+    </div>
+
+
+<script type="text/javascript">
+ var urlmenu = document.getElementById( 'menu' );
+ urlmenu.onchange = function() {
+      window.open( this.options[ this.selectedIndex ].value );
+ };
+</script>
+<%= yield %>
+  <footer>Danyale's Barcelona Surfing School, 3456 On The Beach, Barcelona, Spain Email: surfing@beach.com Phone: 1-800-ride-waves Coded and Designd By: Code. Design. Surf.</footer>
+    
+  </body>
+</html>
