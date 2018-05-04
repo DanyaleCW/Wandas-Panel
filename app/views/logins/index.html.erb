@@ -1,0 +1,9 @@
+<%= form_for @welcomes do |f| %>  
+    <%= f.label :user_name %>  
+    <%= f.text_field :user_name, value: @welcome.user_name%>
+    <%= f.label :password %>  
+    <%= f.text_field :password, value: @welcome.password%>   
+    
+   
+    <%= f.submit %>
+<% end %>

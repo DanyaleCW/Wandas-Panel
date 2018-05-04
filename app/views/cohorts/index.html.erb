@@ -1,1 +1,9 @@
-<h1>Cohorts</h1>
+<h1>Cohorts-Index</h1>
+
+<% @cohorts.each do |c| %>
+    
+        <%= c.name %>
+        <%= c.start_date %>
+        <%= c.end_date %>
+   
+<% end %>
