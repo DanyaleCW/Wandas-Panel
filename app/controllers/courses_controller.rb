@@ -13,34 +13,28 @@ class CoursesController < ApplicationController
         puts 'Courses-Show -mashal is super helpful'
     end
 
-       
-
     def new 
         @course = Course.new
-        puts 'Courses-New -mashal is super helpful'
     end
 
     def create
         Course.create(course_params)
-        redirect_to '/coourses'
+        redirect_to '/courses'
     end   
 
     def edit 
         @course = Course.find(params[:id])
-        puts 'Courses-Index -david sucks'
     end 
 
     def update
         @course = Course.find(params[:id])
         @course.update(course_params)
         redirect_to '/courses' 
-        puts 'Courses-update -mashal is super helpful'
     end
 
     def destroy
-         @course.find(params[:id]).destroy
-        redirect_to '/course' 
-        puts 'Courses-destroy -mashal is super helpful'
+        Course.find(params[:id]).destroy
+        redirect_to '/courses' 
     end
 
      private

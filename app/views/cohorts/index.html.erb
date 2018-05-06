@@ -1,9 +1,36 @@
 <h1>Cohorts-Index</h1>
 
+<nav>
+  <ul class="nav navbar-nav navbar-right">
+    <li><a href="/">Home</a></li>
+    <li><a href="/">Help</a></li>
+    <li><a href="login">Log in</a></li>
+    <li><a href="/cohorts/new">Create Cohort</a></li>
+    <li><a href="/cohorts/:id/edit">Edit Cohort</a></li>
+  </ul>
+</nav>
+
+
+<table>
+    <thead>
+        <th>Reference No.</th>
+        <th>Name</th>
+        <th>Start_Date</th>
+        <th>End_Date</th>
+        <th>Instructor No.</th>
+        <th>Course No.</th>
+    </thead>
+    <tbody>
 <% @cohorts.each do |c| %>
-    
-        <%= c.name %>
-        <%= c.start_date %>
-        <%= c.end_date %>
-   
-<% end %>
+    <tr>
+        
+        <td><%= c.id %></td>
+        <td><%= c.name %></td>
+        <td><%= c.start_date %></td>
+        <td><%= c.end_date %></td>
+        <td><%= c.instructor_id %></td>
+        <td><%= c.course_id %></td>
+    </tr>
+<% end %>   
+    </tbody>
+</table>

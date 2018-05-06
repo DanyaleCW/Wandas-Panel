@@ -4,20 +4,17 @@ class CohortsController < ApplicationController
     #links to a /views/owners/index.html.erb
     def index 
         @cohorts = Cohort.all
-        puts 'Cohorts-Index -mashal is super helpful'
     end 
 
 #links to /owners/:id route
 #links to a /views/owners/show.html.erb
     def show 
         @cohort = Cohort.find(params[:id])
-        puts 'Cohorts-Show -mashal is super helpful'
     end
 
 #create new cohort
     def new 
         @cohort = Cohort.new
-        puts 'Cohorts-New -mashal is super helpful'
     end
 
     def create
@@ -28,20 +25,17 @@ class CohortsController < ApplicationController
 #edit cohort
     def edit 
         @cohort = Cohort.find(params[:id])
-        puts 'Cohorts-Index -david sucks'
     end    
 
     def update 
         @cohort = Cohort.find(params[:id])
         @cohort.update(cohort_params)
         redirect_to '/cohorts'
-        puts 'Cohorts-update -mashal is super helpful'
     end
 
     def destroy 
-        @cohort.find(params[:id]).destroy
-        redirect_to '/cohort'
-        puts 'Cohorts-destroy -mashal is super helpful'
+        Cohort.find(params[:id]).destroy
+        redirect_to '/cohorts'
     end
 
     private
