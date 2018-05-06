@@ -1,11 +1,34 @@
 <h1>Instructors-Index</h1>
 
+<nav>
+  <ul class="nav navbar-nav navbar-right">
+    <li><a href="/">Home</a></li>
+    <li><a href="/">Help</a></li>
+    <li><a href="login">Log in</a></li>
+    <li><a href="/instructors/new">Create Instructor</a></li>
+    <li><a href="/instructors/:id/edit">Edit Instructor</a></li>
+  </ul>
+</nav>
+
+<table>
+    <thead>
+        <th>Instructor No.</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Salary</th>
+        <th>Education</th>
+    </thead>
+    <tbody>
 <% @instructors.each do |i| %>
-    
-        <%= i.fname %>
-        <%= i.lname %>
-        <%= i.age %>
-        <%= i.salary %>
-        <%= i.education %>
-   
+    <tr>
+        <td><%= i.id %></td>
+        <td><%= i.fname %></td>
+        <td><%= i.lname %></td>
+        <td><%= i.age %></td>
+        <td><%= i.salary%></td>
+        <td><%= i.education%></td>
+    </tr>
 <% end %>
+    </tbody>
+</table>

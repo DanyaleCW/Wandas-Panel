@@ -35,8 +35,8 @@ class StudentsController < ApplicationController
     end
 
     def destroy 
-        @student.find(params[:id]).destroy
-        redirect_to '/student'
+        Student.find(params[:id]).destroy
+        redirect_to '/students'
     end
 
     private
@@ -45,6 +45,6 @@ class StudentsController < ApplicationController
     # list between create and update. Also, you can specialize this method
     # with per-user checking of permissible attributes.
     def student_params
-      params.require(:student).permit(:fname, :name, :age, :education)
+      params.require(:student).permit(:fname, :lname,:name, :age, :education)
     end
 end
