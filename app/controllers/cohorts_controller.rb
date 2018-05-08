@@ -4,12 +4,14 @@ class CohortsController < ApplicationController
     #links to a /views/owners/index.html.erb
     def index 
         @cohorts = Cohort.all
+        
     end 
 
 #links to /owners/:id route
 #links to a /views/owners/show.html.erb
     def show 
         @cohort = Cohort.find(params[:id])
+        render action: "cohort_layout"
     end
 
 #create new cohort

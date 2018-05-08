@@ -4,6 +4,8 @@
     <li><a href="/">Home</a></li>
     <li><a href="/">Help</a></li>
     <li><a href="login">Log in</a></li>
+    <li><a href="/courses/new">Create Course</a></li>
+    <li><a href="/courses/:id/edit">Edit Course</a></li>
   </ul>
 </nav>
 
@@ -11,7 +13,7 @@
     <thead>
         <th>Reference No.</th>
         <th>Name</th>
-        <th>Hours</th>
+        <th>Hours Required</th>
     </thead>
     <tbody>
 <% @courses.each do |c| %>
@@ -23,3 +25,8 @@
 <% end %>
     </tbody>
 </table>
+
+<button class="button">New</button>
+<button class="button">Edit</button>
+<button class="button">Delete</button>
+<button class="button">Print</button>

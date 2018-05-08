@@ -21,7 +21,7 @@
     <tbody>
 <% @students.each do |s| %>
     <tr>
-        <td> <%= s.id %></td>
+        <td><a href="/students/<%= s.id %>/edit> "></td>
         <td> <%= s.fname %></td>
         <td><%= s.lname %></td>
         <td><%= s.age %></td>
@@ -30,3 +30,8 @@
 <% end %>
     </tbody>
 </table>
+
+<button class="button">New</button>
+<button class="button">Edit</button>
+<button class="button">Delete</button>
+<button class="button">Print</button>

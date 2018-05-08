@@ -1,9 +1,19 @@
-<%= form_for @welcomes do |f| %>  
+<h1>Login-Index</h1>
+
+<nav>
+  <ul class="nav navbar-nav navbar-right">
+    <li><a href="/">Home</a></li>
+    <li><a href="/">Help</a></li>
+  </ul>
+</nav>
+
+<%= form_for @admins do |f| %>  
     <%= f.label :user_name %>  
-    <%= f.text_field :user_name, value: @welcome.user_name%>
+    <%= f.text_field :user_name, value: @admin.user_name%>
+    <%= f.label :email %>  
+    <%= f.text_field :email, value: @admin.email%>
     <%= f.label :password %>  
-    <%= f.text_field :password, value: @welcome.password%>   
-    
+    <%= f.text_field :password, value: @admin.password%>   
    
     <%= f.submit %>
 <% end %>
