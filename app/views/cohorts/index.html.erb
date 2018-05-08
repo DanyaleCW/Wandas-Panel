@@ -1,5 +1,7 @@
 <h1>Cohorts-Index</h1>
 
+<div class="container">
+<div>
 <nav>
   <ul class="nav navbar-nav navbar-right">
     <li><a href="/">Home</a></li>
@@ -9,8 +11,9 @@
     <li><a href="/cohorts/:id/edit">Edit Cohort</a></li>
   </ul>
 </nav>
+</div>
 
-
+<div>
 <table>
     <thead>
         <th>Reference No.</th>
@@ -22,15 +25,23 @@
     </thead>
     <tbody>
 <% @cohorts.each do |c| %>
-    <tr>
-        
+    <tr>  
         <td><%= c.id %></td>
         <td><%= c.name %></td>
         <td><%= c.start_date %></td>
         <td><%= c.end_date %></td>
-        <td><%= c.instructor_id %></td>
-        <td><%= c.course_id %></td>
+        <td><%= c.instructor_id %></td>      
+        <td><%= c.course.name %></td>
     </tr>
 <% end %>   
     </tbody>
 </table>
+</div>
+
+<div>
+<button class="button">New</button>
+<button class="button">Edit</button>
+<button class="button">Delete</button>
+<button class="button">Print</button>
+</div>
+</div>

@@ -1,3 +1,27 @@
 // Place all the styles related to the cohorts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.container {
+    display: grid
+
+}
+.button {
+    background-color: white;
+    color: black;
+    border: 2px solid #506C64;
+}
+.button {
+    background-color: #220C10;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
