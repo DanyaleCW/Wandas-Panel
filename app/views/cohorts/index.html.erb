@@ -17,11 +17,11 @@
 <table>
     <thead>
         <th>Reference No.</th>
-        <th>Name</th>
+        <th>Cohort Name</th>
         <th>Start_Date</th>
         <th>End_Date</th>
-        <th>Instructor No.</th>
-        <th>Course No.</th>
+        <th>Instructor Name</th>
+        <th>Course Name</th>
     </thead>
     <tbody>
 <% @cohorts.each do |c| %>
@@ -30,7 +30,7 @@
         <td><%= c.name %></td>
         <td><%= c.start_date %></td>
         <td><%= c.end_date %></td>
-        <td><%= c.instructor_id %></td>      
+        <td><%= c.instructor.fname %> <%= c.instructor.lname %></td>      
         <td><%= c.course.name %></td>
     </tr>
 <% end %>   
