@@ -11,7 +11,6 @@ class CohortsController < ApplicationController
 #links to a /views/owners/show.html.erb
     def show 
         @cohort = Cohort.find(params[:id])
-        render action: "cohort_layout"
     end
 
 #create new cohort
@@ -20,6 +19,7 @@ class CohortsController < ApplicationController
     end
 
     def create
+        # @cohort = Cohort.find(params[:id])
         Cohort.create(cohort_params)
         redirect_to '/cohorts'
     end    

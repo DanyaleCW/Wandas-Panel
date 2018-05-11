@@ -1,3 +1,5 @@
+
+
 <%= form_for @cohort do |f| %>  
     <%= f.label :name %>  
     <%= f.text_field :name, value: @cohort.name%>  
@@ -5,10 +7,10 @@
     <%= f.text_field :start_date, value: @cohort.start_date%>
     <%= f.label :end_date %>  
     <%= f.text_field :end_date, value: @cohort.end_date%> 
-    <%= f.label :instructor_id %>  
-    <%= f.number_field :instructor_id, value: @cohort.instructor_id%> 
+    <%= f.label :instructor %>  
+    <%= f.text_field :instructor_id, value: @cohort.instructor.fname%> 
     <%= f.label :course_id %>  
-    <%= f.number_field :course_id, value: @cohort.course_id%>
+    <%= f.text_field :course_id, value: @cohort.course.name%>
 
     <%= f.submit %>
 <% end %>

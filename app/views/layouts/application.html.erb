@@ -22,6 +22,7 @@
         <li><a href="/">Wet Suits</a></li>
         <li><a href="/">Surf Boards</a></li>
       </ul>
+
     </div>
     </div>
     
@@ -31,8 +32,15 @@
     
 
 
-  <footer>Danyale's Barcelona Surfing School. Coded and Designd By: Code. Design. Surf.</footer>
-    
+  <footer>Danyale's Barcelona Surfing School. Coded and Designed By: Code. Design. Surf.</footer>
+
+
+   <script type="text/javascript">
+ var urlmenu = document.getElementById( 'menu' );
+ urlmenu.onchange = function() {
+      window.open( this.options[ this.selectedIndex ].value );
+ };
+</script> 
   </body>
 </html>
 
