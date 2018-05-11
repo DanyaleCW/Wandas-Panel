@@ -1,0 +1,8 @@
+console.log('create action')
+
+//Hides the task form once the user has hit submit
+form.style.display = "none";
+
+//renders to partial and the partial shows via DOM manipulation
+//beforeend insert the created item at the bottom of the form but before the end
+document.getElementById('my-students').insertAdjacentHTML('beforeend', '<%= j render partial: "student", locals: {student: @new_student} %>');

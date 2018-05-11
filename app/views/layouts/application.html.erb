@@ -9,6 +9,9 @@
   </head>
 
   <body>
+
+  
+    <div class="container">
     <div class="navbar">
       <ul>
         <li><a href="/instructors">Instructors</a></li>
@@ -18,37 +21,14 @@
         <li><a href="/">Groups</a></li>
         <li><a href="/">Wet Suits</a></li>
         <li><a href="/">Surf Boards</a></li>
-        <li><a href="/instructors">Instructors</a></li>
-        <li><a href="/students">Students</a></li>
-        <li><a href="/courses">Courses</a></li>
-        <li><a href="/cohorts">Cohorts</a></li>
-          <%# <div class="dropdown">
-            <button class="dropbtn">Cohorts</button>
-                <div class="dropdown-content">
-                  <li><a href="/">Surfing 101</a></li>
-                  <li><a href="Surfing 202">Surfing 202</a></li>
-                  <li><a href="Kite Surfing 101">Kite Surfing 101</a></li>
-                  <li><a href="Kite Surfing 202">Kite Surfing 202</a></li>
-                  <li><a href="Wake Surfing 101">Wake Surfing 101</a></li>
-                  <li><a href="Wake Surfing 202">Wake Surfing 202</a></li>
-                  <li><a href="/Board Maintenance">Board Maintenance</a></li> %>
-
       </ul>
-                <%# </div>
-          </div> %>
     </div>
-
-<%= yield %>
+    </div>
     
- 
-<script type="text/javascript">
- var urlmenu = document.getElementById( 'menu' );
- urlmenu.onchange = function() {
-      window.open( this.options[ this.selectedIndex ].value );
- };
-</script>
-
-
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
+    
 
 
   <footer>Danyale's Barcelona Surfing School. Coded and Designd By: Code. Design. Surf.</footer>

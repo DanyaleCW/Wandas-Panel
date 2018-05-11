@@ -19,8 +19,7 @@ class StudentsController < ApplicationController
     end
 
     def create
-        Student.create(student_params)
-        redirect_to '/students'
+        @new_student.create(student_params)
     end    
 
 #edit cohort
@@ -31,12 +30,11 @@ class StudentsController < ApplicationController
     def update 
         @student = Student.find(params[:id])
         @student.update(student_params)
-        redirect_to '/students'
     end
 
     def destroy 
-        Student.find(params[:id]).destroy
-        redirect_to '/students'
+        @student = student.find(params[:id])
+        @task.destroy
     end
 
     private

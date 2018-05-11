@@ -1,4 +1,3 @@
 class ApplicationController < ActionController::Base
-
-    @courses = Course.all
+    protect_from_forgery with: :exception
 end

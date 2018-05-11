@@ -15,13 +15,11 @@
 
 
 //= require turbolinks
-//= require bootstrap-sprockets
+
 //= require_tree .
 
+// document.getElementById('ajaxcall').addEventListener('ajax:success', function(e){
+//    console.log('Call exectued to render code');
+// })
 
-<script type="text/javascript">
-    var urlmenu = document.getElementById( 'menu' );
- urlmenu.onchange = function() {
-        window.open(this.options[this.selectedIndex].value);
-    };
-</script>
+let studentdiv;

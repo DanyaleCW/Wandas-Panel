@@ -4,9 +4,7 @@
   <ul class="nav navbar-nav navbar-right">
     <li><a href="/">Home</a></li>
     <li><a href="/">Help</a></li>
-    <li><a href="login">Log in</a></li>
-    <li><a href="/students/new">Create Student</a></li>
-    <li><a href="/students/:id/edit">Edit Student</a></li>
+    <li><a href="login">Log In</a></li>
   </ul>
 </nav>
 
@@ -18,20 +16,22 @@
         <th>Age</th>
         <th>Education</th>
     </thead>
-    <tbody>
-<% @students.each do |s| %>
+    <tbody id="my-students">
+        <% @students.each do |student| %>
     <tr>
-        <td><a href="/students/<%= s.id %>/edit> "></td>
-        <td> <%= s.fname %></td>
-        <td><%= s.lname %></td>
-        <td><%= s.age %></td>
-        <td><%= s.education %></td>
+        <td><a href="/students/<%= student.id %>/edit> "></td>
+        <td> <%= student.fname %></td>
+        <td><%= student.lname %></td>
+        <td><%= student.age %></td>
+        <td><%= student.education %></td>
     </tr>
 <% end %>
     </tbody>
 </table>
 
-<button class="button">New</button>
-<button class="button">Edit</button>
-<button class="button">Delete</button>
-<button class="button">Print</button>
+<br>
+
+<%= link_to 'New Student', new_student_path, remote: true, id: "ajaxcall" %>
+
+<div id="student-form" style="display:none;">
+</div>
