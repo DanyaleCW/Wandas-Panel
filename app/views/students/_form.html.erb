@@ -1,0 +1,25 @@
+<% form_for @student, remote: true do |f| %>
+    <div class="field">
+        <% f.label :First %>
+        <% f.text_field :fname, id: :student_fname %>
+    </div>   
+
+    <div class="field">
+        <% f.label :Last %>
+        <% f.text_field :lname, id: :student_lname %>
+    </div>  
+
+    <div class="field">
+        <% f.label :Age %>
+        <% f.number_field :age, id: :student_age %>
+    </div> 
+
+    <div class="field">
+        <% f.label :Education %>
+        <% f.text_field :education, id: :student_education %>
+    </div> 
+
+    <div class="actions">
+        <% f.submit %>
+    </div>    
+<% end %>        

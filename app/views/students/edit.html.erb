@@ -1,17 +1,6 @@
 
-<%= form_for @student do |f| %>  
-    <%= f.label :First %>  
-    <%= f.text_field :fname, value: @student.fname%>
-    <%= f.label :Last %>  
-    <%= f.text_field :lname, value: @student.lname%>   
-    <%= f.label :age %>  
-    <%= f.number_field :age, value: @student.age%>
-    <%= f.label :education %>  
-    <%= f.text_field :education, value: @student.education%> 
-   
+<h1>Edit Student</h1>
 
-    <%= f.submit %>
-<% end %>
+<h1>New Student</h1>
 
-
-<%= link_to 'Delete', student_path(@student), method: :delete %>
+<%= render 'form', student: @student %>

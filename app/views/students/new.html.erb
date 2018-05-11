@@ -1,14 +1,5 @@
-<%= form_for @student do |f| %>  
-    <%= f.label :fname %>  
-    <%= f.text_field :fname, value: @student.fname%>
-    <%= f.label :lname %>  
-    <%= f.text_field :lname, value: @student.lname%>   
-    <%= f.label :age %>  
-    <%= f.number_field :age, value: @student.age%>
-    <%= f.label :education %>  
-    <%= f.text_field :education, value: @student.education%> 
-   <%= f.label :cohorts %>  
-    <%= f.text_field :cohorts, value: @student.cohorts%> 
 
-    <%= f.submit %>
-<% end %>
+<h1>New Student</h1>
+
+<%= render partial 'form', student: @student %>
+<%= link_to 'Back', students_path %>

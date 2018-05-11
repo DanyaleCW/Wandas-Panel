@@ -9,23 +9,27 @@
   </head>
 
   <body>
+
+  
     <div class="container">
     <div class="navbar">
       <ul>
-        <li><a href="/instructors">Instructors</a>
-        <li><a href="/students">Students</a> 
-        <li><a href="/courses">Courses</a>
-        <li><a href="/cohorts">Cohorts</a>
-        <li><a href="/">Groups</a>
-        <li><a href="/">Wet Suits</a>
-        <li><a href="/">Surf Boards</a>     
-      </ul>           
-    </div>      
+        <li><a href="/instructors">Instructors</a></li>
+        <li><a href="/students">Students</a></li>
+        <li><a href="/courses">Courses</a></li>
+        <li><a href="/cohorts">Cohorts</a></li>
+        <li><a href="/">Groups</a></li>
+        <li><a href="/">Wet Suits</a></li>
+        <li><a href="/">Surf Boards</a></li>
+      </ul>
+
     </div>
-
-<%= yield %>
+    </div>
     
-
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
+    
 
 
   <footer>Danyale's Barcelona Surfing School. Coded and Designed By: Code. Design. Surf.</footer>

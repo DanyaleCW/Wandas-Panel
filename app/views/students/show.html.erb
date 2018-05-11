@@ -1,6 +1,12 @@
 <h1>Show Students</h1>
+<p id="notice"> <%= notice %></p>
 
-<%= @student.lname %>
-<%= @student.fname %>
-<%= @student.age %> 
-<%= @student.education %>
+<p>
+    <%= @student.lname %>
+    <%= @student.fname %>
+    <%= @student.age %> 
+    <%= @student.education %>
+</p>
+
+<%= link_to 'Edit', edit_student_path(@student)%>
+<%= link_to 'Back', student_path %>
