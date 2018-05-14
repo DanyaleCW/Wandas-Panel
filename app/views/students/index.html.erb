@@ -1,35 +1,28 @@
 <h1>Students-Index</h1>
 
-<nav>
-  <ul class="nav navbar-nav navbar-right">
-    <li><a href="/">Home</a></li>
-    <li><a href="/">Help</a></li>
-    <li><a href="login">Log In</a></li>
-  </ul>
-</nav>
-
-<table>
-    <thead>
+<div>
+    <div>
         <th>Student No.</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Age</th>
         <th>Education</th>
-    </thead>
-    <tbody id="my-students">
+    </div>
+    <div id="my-students">
         <% @students.each do |student| %>
-    <tr>
-        <td><a href="/students/<%= student.id %>/edit> "></td>
-        <td> <%= student.fname %></td>
-        <td><%= student.lname %></td>
-        <td><%= student.age %></td>
-        <td><%= student.education %></td>
-    </tr>
+    <ol>
+        <li><%= student.id %></li>
+        <li> <%= student.fname %></li>
+        <li><%= student.lname %></li>
+        <li><%= student.age %></li>
+        <li><%= student.education %></li>
+    </ol>
 <% end %>
-    </tbody>
-</table>
+    </div>
+</div>
 
 <br>
+
 
 <%= link_to 'New Student', new_student_path, remote: true, id: "ajaxcall" %>
 

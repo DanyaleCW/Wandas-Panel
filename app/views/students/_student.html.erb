@@ -1,10 +1,13 @@
 
 
-<tr id="students-<% student.id %>">
-    <td><%= student.fname %></td>
-    <td><%= student.lname %></td>
-    <td><%= student.age %></td>
-    <td><%= student.education %></td>
-    <td><%= link_to 'Destroy', student_path(student), method: :delete, remote:true, data: { confirm: 'Once you hit this button there is no going back!!!!'} %></td>
-    <td><%= link_to 'Edit', edit_student_path(student), remote:true %></td>
-    </tr>
+<div id="student-<% student.id %>">
+    <ol>
+    <li><%= student.fname %></li>
+    <li><%= student.lname %></li>
+    <li><%= student.age %></li>
+    <li><%= student.education %></li>
+    
+    <li><%= link_to 'Edit', edit_student_path(student), remote:true %></li>
+    <li><%= link_to 'Destroy', student_path(student), method: :delete, remote:true, data: { confirm: 'Once you hit this button there is no going back!!!!'} %></li>
+    </ol>
+    </div>
