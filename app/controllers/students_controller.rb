@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
-    # before_action :set_student, only: [:show, :edit, :update, :destroy]
-    # before_action :authenticate_admin!
+    before_action :set_student, only: [:show, :edit, :update, :destroy]
+    before_action :authenticate_admin!
     #links to my /owners route
     #links to a /views/owners/index.html.erb
     def index 
@@ -37,8 +37,8 @@ class StudentsController < ApplicationController
     end
 
     def destroy 
-        @student = student.find(params[:id])
-        @task.destroy
+        @student = Student.find(params[:id])
+        @student.destroy
     end
 
     private
@@ -46,7 +46,9 @@ class StudentsController < ApplicationController
     # just a good pattern since you'll be able to reuse the same permit
     # list between create and update. Also, you can specialize this method
     # with per-user checking of permissible attributes.
-    
+    def set_student
+      @student = Student.find(params[:id])
+   end
 
     def student_params
       params.require(:student).permit(:fname, :lname,:name, :age, :education)

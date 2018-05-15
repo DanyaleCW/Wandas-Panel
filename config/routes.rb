@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   root 'admins#index'
 
+
+  resources :welcome
+
   resources :students
   resources :courses
   resources :instructors

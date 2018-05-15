@@ -3,5 +3,4 @@ class WelcomesController < ApplicationController
         puts 'Welcome-Index -mashal is super helpful'
     end
 
-    
 end     

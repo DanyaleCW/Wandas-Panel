@@ -1,14 +1,10 @@
 console.log('edit js file')
 
 //where the edit goes
- studentdiv = document.getElementById('student-<%= @student.id%>');
+studentdiv = document.getElementById('student-<% @student.id%>')
  
  //shows what was clicked on
- <%# console.log("clicked" + studentdiv.innerText) %>
+ //console.log("clicked" + studentdiv.innerText)
 
  //used jquery to replace TR because they do not like form inside of them
-
-
- studentdiv.innerHTML = "<%= j (render 'form') %>";
-
- form.style.display = "block";
+ $(studentdiv).replaceWith("<%=j (render 'form') %>");

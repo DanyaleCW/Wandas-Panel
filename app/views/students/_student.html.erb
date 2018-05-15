@@ -1,13 +1,28 @@
 
 
 <div id="student-<% student.id %>">
-    <ol>
-    <li><%= student.fname %></li>
-    <li><%= student.lname %></li>
-    <li><%= student.age %></li>
-    <li><%= student.education %></li>
+    <div>
+        <span>Student No.: </span><%= student.id %>
+    </div>
+    <div>
+        <span>First Name: </span><%= student.fname %>
+    </div>
+    <div>
+        <span>Last Name: </span><%= student.lname %>
+    <div>    
+        <span>Age: </span><%= student.age %>
+    </div>    
+    <div>
+        <span>Education: </span><%= student.education %>
+    </div>    
+    </br>
     
-    <li><%= link_to 'Edit', edit_student_path(student), remote:true %></li>
-    <li><%= link_to 'Destroy', student_path(student), method: :delete, remote:true, data: { confirm: 'Once you hit this button there is no going back!!!!'} %></li>
-    </ol>
+    <div><%= link_to 'Edit', edit_student_path(student), remote:true %></div>
+    <div><%= link_to 'Destroy', student_path(student),  method: :delete, remote:true, data: { confirm: 'Once you hit this button there is no going back!!!!'} %></div>
+    </br>
+    </br>
+    </br>
+    </br>
+
+    
     </div>

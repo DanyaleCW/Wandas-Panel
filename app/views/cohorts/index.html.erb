@@ -1,6 +1,5 @@
 <h1>Cohorts-Index</h1>
 
-<div>
 <table>
     <thead>
         <th>Reference No.</th>
@@ -9,6 +8,7 @@
         <th>End_Date</th>
         <th>Instructor Name</th>
         <th>Course Name</th>
+        <th>Students Enrolled</th>
     </thead>
     <tbody>
 <% @cohorts.each do |c| %>
@@ -19,16 +19,14 @@
         <td><%= c.end_date %></td>
         <td><%= c.instructor.fname %> <%= c.instructor.lname %></td>      
         <td><%= c.course.name %></td>
+        <% c.students.each do |student| %>
+        <td><%= student.student_id %> </td>
+        <% end %>
+        <% end %>
     </tr>
-<% end %>   
+
     </tbody>
 </table>
-</div>
 
-<div>
-<button class="button">New</button>
-<button class="button">Edit</button>
-<button class="button">Delete</button>
-<button class="button">Print</button>
-</div>
-</div>
+
+
