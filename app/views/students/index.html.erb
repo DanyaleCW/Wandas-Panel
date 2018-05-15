@@ -1,15 +1,15 @@
 <h1>Students-Index</h1>
 
-<div>
-    <div>
-        <th>Student No.</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Age</th>
-        <th>Education</th>
+    <div class="main">
+        <li>Student No.</li>
+        <li>First Name</li>
+        <li>Last Name</li>
+        <li>Age</li>
+        <li>Education</li>
     </div>
     <div id="my-students">
         <% @students.each do |student| %>
+       <%= render student %>
     <ol>
         <li><%= student.id %></li>
         <li> <%= student.fname %></li>
@@ -17,12 +17,11 @@
         <li><%= student.age %></li>
         <li><%= student.education %></li>
     </ol>
+     
 <% end %>
     </div>
-</div>
 
 <br>
-
 
 <%= link_to 'New Student', new_student_path, remote: true, id: "ajaxcall" %>
 
