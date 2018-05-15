@@ -8,8 +8,10 @@
     <%= f.label :salary %>  
     <%= f.text_field :salary, value: @instructor.salary%> 
     <%= f.label :education %>  
-    <%= f.text_field :education, value: @instructor.education%> 
-   
+    <%= f.select :education, [['Champion','Champion'],
+                        ['Master','Master'],
+                        ['Pro','Pro']],
+                        {:multiple => true} %>
 
     <%= f.submit %>
 <% end %>

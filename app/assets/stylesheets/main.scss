@@ -21,6 +21,7 @@ ul {
 
 li {
     float: left;
+    list-style-type: none;
 }
 
 li a {
@@ -38,6 +39,15 @@ li a:hover {
 .main {
     text-align: center;
 }
+
+.link-color {
+    color: red;
+}
+
+span {
+    font-size: 18px;
+    font-weight: bold;
+     }
 
 .footer {
     background-color: #77CBB9;

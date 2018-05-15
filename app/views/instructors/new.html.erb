@@ -7,9 +7,11 @@
     <%= f.number_field :age, value: @instructor.age%>
     <%= f.label :salary %>  
     <%= f.text_field :salary, value: @instructor.salary%> 
-    <%= f.label :education %>  
-    <%= f.text_field :education, value: @instructor.education%> 
-   
+    <%= f.label :education %>
+    <%= f.select :education, [['Champion','Champion'],
+                        ['Master','Master'],
+                        ['Pro','Pro']],
+                        {:multiple => true} %>
 
     <%= f.submit %>
 <% end %>
