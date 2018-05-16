@@ -1,7 +1,7 @@
 console.log("new action")
 
 //selects hidden form element from index.html.erb
-let form = document.getElementById('my-students');
+let form = document.getElementById('my-students<%= @student.id%>');
 
 //sets innerHTML to a string of html elements
 form.innerHTML = "<%= j (render 'form') %>";
