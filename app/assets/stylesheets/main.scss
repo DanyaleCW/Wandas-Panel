@@ -52,5 +52,8 @@ span {
 .footer {
     background-color: #77CBB9;
     padding: 10px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
     text-align: center;
 }
