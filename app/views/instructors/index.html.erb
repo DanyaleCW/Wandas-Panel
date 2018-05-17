@@ -1,7 +1,24 @@
 <h1>Instructors</h1>
+<div class="flex-container">
+    <div>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/instructors">Instructors</a></li>
+        <li><a href="/students">Students</a></li>
+        <li><a href="/courses">Courses</a></li>
+        <li><a href="/cohorts">Cohorts</a></li>
+        <li><a href="/">Groups</a></li>
+        <li><a href="/">Wet Suits</a></li>
+        <li><a href="/">Surf Boards</a></li>
+        <li><a href="/schools/Hawaii">Hawaii</a></li>
+        <li><a href="/schools/Nicaragua">Nicaragua</a></li>
+        <li><a href="/schools/TheCookIslands">The Cook Islands</a></li>
+        <li><a href="/">Help</a></li>
+    </ul>    
+    </div>
 
 <nav>
-  <ul class="nav navbar-nav navbar-right">
+  <ul>
     <li><a href="/instructors/new">Create Instructor</a></li>
     <li><a href="/instructors/:id/edit">Edit Instructor</a></li>
   </ul>
@@ -23,14 +40,10 @@
         <td><%= i.fname %></td>
         <td><%= i.lname %></td>
         <td><%= i.age %></td>
-        <td> $<%= i.salary%></td>
-        <td><%= i.education%></td>
+        <td> $<%= i.salary %></td>
+        <td><%= i.education %></td>
     </tr>
 <% end %>
     </tbody>
 </table>
-
-<%# <button class="button">New</button>
-<button class="button">Edit</button>
-<button class="button">Delete</button>
-<button class="button">Print</button> %>
+</div>

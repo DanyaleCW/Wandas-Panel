@@ -1,3 +1,5 @@
+
+
 <%= form_for @instructor do |f| %>  
     <%= f.label :First %>  
     <%= f.text_field :fname, value: @instructor.fname%>
@@ -9,9 +11,9 @@
     <%= f.text_field :salary, value: @instructor.salary%> 
     <%= f.label :education %>  
     <%= f.select :education, [['Champion','Champion'],
-                        ['Master','Master'],
-                        ['Pro','Pro']],
-                        {:multiple => true} %>
+                             ['Master','Master'],
+                             ['Pro','Pro']],
+                             {:multiple => true} %>
 
     <%= f.submit %>
 <% end %>

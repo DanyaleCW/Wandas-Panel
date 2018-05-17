@@ -1,4 +1,23 @@
 <h1>Students</h1>
+<div class="flex-container">
+    <div class="navbar">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/instructors">Instructors</a></li>
+        <li><a href="/students">Students</a></li>
+        <li><a href="/courses">Courses</a></li>
+        <li><a href="/cohorts">Cohorts</a></li>
+        <li><a href="/">Groups</a></li>
+        <li><a href="/">Wet Suits</a></li>
+        <li><a href="/">Surf Boards</a></li>
+        <li><a href="/">Hawaii</a></li>
+        <li><a href="/">Nicaragua</a></li>
+        <li><a href="/">The Cook Islands</a></li>
+        <li><a href="/">Help</a></li>
+      </ul>
+
+    </div>
+
 
     <div id="my-students">
         <% @students.each do |student| %>
@@ -6,11 +25,13 @@
        <%= render student %>
     
 <% end %>
+    <div>
+        <%= link_to 'New Student', new_student_path, remote: true, id: "ajaxcall" %>
+    </div>
     </div>
 
 <br>
-<div>
-<%= link_to 'New Student', new_student_path, remote: true, id: "ajaxcall" %>
-</div>
-<div id="student-form" style="display:none;">
+
+    <div id="student-form" style="display:none;">
+    </div>
 </div>

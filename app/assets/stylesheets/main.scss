@@ -4,6 +4,7 @@ body {
     //background-color: #77CBB9;
     background: url(assets_path("ruben-gutierrez-365908-unsplash.jpg"));
     background-color: #7DBDE0;
+    padding-bottom: 100px;
 }
 .header {
     background-color: #77CBB9;
@@ -34,6 +35,20 @@ li a {
 
 li a:hover {
     background-color: #570320;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container>* {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
 }
 
 .main {
