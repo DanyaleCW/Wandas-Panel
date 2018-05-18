@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root 'admins#index'
   get "/schools/:school" => "schools#show"
+  get "/helps/:help" => "helps#show"
 
   resources :students
   resources :courses
