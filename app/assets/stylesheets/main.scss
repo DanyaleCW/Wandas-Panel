@@ -6,6 +6,10 @@ body {
     background-color: #7DBDE0;
     padding-bottom: 100px;
 }
+.logo {
+    max-width: 200px;
+    max-height: 200px;
+}
 .header {
     background-color: #77CBB9;
     text-align: center;
@@ -17,7 +21,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #75b8c8;
+    // background-color: #75b8c8;
+    background-color: #570320;
 }
 
 li {
@@ -34,7 +39,8 @@ li a {
 }
 
 li a:hover {
-    background-color: #570320;
+    // background-color: #570320;
+    background-color: #75b8c8;
 }
 
 .flex-container {
