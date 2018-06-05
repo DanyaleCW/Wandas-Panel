@@ -10,7 +10,7 @@ Devise gem
 https://wandas-panel.herokuapp.com/
 
 ## Login: 
-Email: mira@wandaspanel.com
+Email: mira@pamelaspanel.com
 Password: 123456
 
 ## Rails Server Port 
