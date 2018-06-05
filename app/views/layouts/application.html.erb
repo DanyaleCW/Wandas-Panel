@@ -1,56 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Wanda's Panel</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <head>
+      <title>Wanda's Panel</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <div class="header">
-  <%= image_tag("logo") %>
-</div>
-  <div class="navbar">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/instructors">Instructors</a></li>
-        <li><a href="/students">Students</a></li>
-        <li><a href="/courses">Courses</a></li>
-        <li><a href="/cohorts">Cohorts</a></li>
-        <li><a href="/">Groups</a></li>
-        <li><a href="/">Wet Suits</a></li>
-        <li><a href="/">Surf Boards</a></li>
-        <li><a href="/schools/Hawaii">Hawaii</a></li>
-        <li><a href="/schools/Nicaragua">Nicaragua</a></li>
-        <li><a href="/schools/TheCookIslands">The Cook Islands</a></li>
-        <li><a href="/helps/help">Help</a></li>
-      </ul>
+      <%= image_tag("logo", alt: "logo", class: "logo") %>
     </div>
+
+    <div class="navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/instructors">Instructors</a></li>
+          <li><a href="/students">Students</a></li>
+          <li><a href="/courses">Courses</a></li>
+          <li><a href="/cohorts">Cohorts</a></li>
+          <li><a href="/">Groups</a></li>
+          <li><a href="/">Wet Suits</a></li>
+          <li><a href="/">Surf Boards</a></li>
+          <li><a href="/schools/Hawaii">Hawaii</a></li>
+          <li><a href="/schools/Nicaragua">Nicaragua</a></li>
+          <li><a href="/schools/TheCookIslands">The Cook Islands</a></li>
+          <li><a href="/helps/help">Help</a></li>
+        </ul>
+      </div>
     
     
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
-  <%# <div class="main"> %>
-  <%= yield %>
-  <%# </div>     %>
+      <%= yield %>
+      
+      <div class="footer">
+        <p><%= link_to "Sign Out", destroy_admin_session_path, method: :delete%>
+        </p>Copyright &copy; 2018 Wanda's Surfing School. Coded and Designed By: Code. Design. Surf.
+      </div>
 
- 
-  <div class="footer">
-  <p><%= link_to "Sign Out", destroy_admin_session_path, method: :delete %></p>
-  Copyright &copy; 2018 Wanda's Surfing School. Coded and Designed By: Code. Design. Surf.</div>
-
-  
-   <%# <script type="text/javascript">
- var urlmenu = document.getElementById( 'menu' );
- urlmenu.onchange = function() {
-      window.open( this.options[ this.selectedIndex ].value );
- }; %>
-</script> 
+      
   </body>
 </html>
 
